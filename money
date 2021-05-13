@@ -1,0 +1,14 @@
+num = int(input('7~9자리 정수를 입력하시오: '))
+list=[]
+while True:
+  list.append(num % 1000)
+  num = num // 1000
+  if num < 1000:
+    list.append(num % 1000)
+    break
+list.reverse()
+
+for i in range(len(list)):
+  print(list[i], end='')
+  if i+1 != len(list):
+    print(',', end='')
